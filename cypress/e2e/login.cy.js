@@ -1,6 +1,6 @@
 describe("Login Tests", () => {
   it("Should log in successfully", () => {
-    cy.login("demo@test.com", "123456");
+    cy.login("aparrap93@gmail.com", "Test@123");
   });
 
   it("Should show error with wrong password", () => {

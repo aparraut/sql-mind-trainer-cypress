@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "https://learn-sql-trainer.vercel.app",
+    baseUrl: "https://sqlmindtrainer.vercel.app/",
     video: true,
     retries: {
       runMode: 2,
