@@ -1,0 +1,16 @@
+{
+  "name": "sql-mind-trainer-cypress",
+  "version": "1.0.0",
+  "description": "Cypress Automation Suite for SQL Mind Trainer",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "author": "Adalberto Parra",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}
