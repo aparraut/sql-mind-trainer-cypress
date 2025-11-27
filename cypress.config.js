@@ -3,12 +3,10 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: "https://sqlmindtrainer.vercel.app/",
-    video: true,
-    retries: {
-      runMode: 2,
-      openMode: 0,
+    setupNodeEvents(on, config) {
+      // tareas personalizadas aquí si las necesitás
     },
-    viewportWidth: 1280,
-    viewportHeight: 800,
+    video: false,
+    screenshotsFolder: "cypress/screens",
   }
 });

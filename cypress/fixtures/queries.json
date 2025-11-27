@@ -1,0 +1,4 @@
+{
+  "level1": "SELECT * FROM customers;",
+  "levelWrong": "SELECT * FROM unknowntable;"
+}
