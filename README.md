@@ -7,7 +7,7 @@ The goal of this suite is to ensure the reliability, consistency, and quality of
 
 ---
 
-🧱 Project Structure
+## 🧱 Project Structure
 
 ```
 cypress/
@@ -48,9 +48,9 @@ This structure follows **enterprise-level** best practices: separation by featur
 
 ---
 
-🚀 Key Features
+## 🚀 Key Features
 
-✔ Full E2E Flow Testing  
+### ✔ Full E2E Flow Testing  
 Covers the entire user journey:
 - Authentication (Login, Signup, Logout)  
 - Level selection and loading  
@@ -58,19 +58,19 @@ Covers the entire user journey:
 - Feedback validation  
 - Progress updates stored in Supabase  
 
-✔ UI & Navigation Validation  
+### ✔ UI & Navigation Validation  
 Ensures:
 - Buttons and screens render correctly  
 - Navigation works across the full app  
 - Visual elements behave responsively  
 
-✔ API Testing  
+### ✔ API Testing  
 Direct validation of Supabase endpoints using `cy.request()`:
 - Auth API  
 - User progress API  
 - Ranking updates  
 
-✔ Custom Commands  
+### ✔ Custom Commands  
 Centralized reusable actions such as:
 - `cy.login(email, password)`
 - `cy.loadLevel(number)`
@@ -78,7 +78,7 @@ Centralized reusable actions such as:
 
 ---
 
-🛠 Installation
+## 🛠 Installation
 
 1. Clone the repository:
 ```bash
@@ -98,7 +98,7 @@ npx cypress open
 
 ---
 
-⚙ Configuration
+## ⚙ Configuration
 
 `cypress.config.js` includes:
 
@@ -114,21 +114,21 @@ https://aparraut.github.io/sql-mind-trainer/
 
 ---
 
-🧪 Running Tests
+## 🧪 Running Tests
 
-Interactive mode:
+### Interactive mode:
 ```bash
 npx cypress open
 ```
 
-Headless mode:
+### Headless mode:
 ```bash
 npx cypress run
 ```
 
 ---
 
-📦 Fixtures
+## 📦 Fixtures
 
 Reusable static data stored in:
 - `users.json` → test accounts  
@@ -136,9 +136,9 @@ Reusable static data stored in:
 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-**Adalberto Parra**
+**Adalberto Parra**  
 QA Functional & Automation Engineer  
 - Portfolio: https://testmindlab.com/  
 - LinkedIn: https://www.linkedin.com/in/adalbertoparra/
