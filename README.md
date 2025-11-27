@@ -141,7 +141,7 @@ Reusable static data stored in:
 **Adalberto Parra**  
 QA Functional & Automation Engineer  
 - Portfolio: https://testmindlab.com/  
-- LinkedIn: https://www.linkedin.com/in/adalbertoparra/
+- LinkedIn: https://www.linkedin.com/in/adalberto-parra/
 
 ---
 
