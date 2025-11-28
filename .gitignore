@@ -16,4 +16,6 @@ cypress/screenshots/
 .idea/
 
 # Cobertura (si la agregas más adelante)
-coverage/
+#coverage/
+
+cypress.env.json
