@@ -98,3 +98,20 @@ Cypress.Commands.add("expectError", () => {
 Cypress.Commands.add("nextLevel", () => {
   cy.get(SELECTORS.nextLevelBtn).should("be.visible").click();
 });
+// LOGOUT
+Cypress.Commands.add("logout", () => {
+  const SELECTORS = {
+    startScreen: "#screen-start",
+    logoutBtn: "#btn-logout",
+    authScreen: "#screen-auth"
+  };
+
+ 
+  // 2. Click en Logout
+  cy.get(SELECTORS.logoutBtn, { timeout: 6000 }).click();
+
+  // 3. Confirmar que volvemos a la pantalla de login
+  cy.get(SELECTORS.authScreen, { timeout: 6000 })
+    .should("exist")
+    .should("be.visible");
+});
