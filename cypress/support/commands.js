@@ -106,7 +106,7 @@ Cypress.Commands.add("logout", () => {
     authScreen: "#screen-auth"
   };
 
- 
+
   // 2. Click en Logout
   cy.get(SELECTORS.logoutBtn, { timeout: 6000 }).click();
 
@@ -114,4 +114,47 @@ Cypress.Commands.add("logout", () => {
   cy.get(SELECTORS.authScreen, { timeout: 6000 })
     .should("exist")
     .should("be.visible");
+});
+Cypress.Commands.add("openLevel", (levelNumber) => {
+  // Primero abrir el mapa de niveles
+  cy.get("#btn-levels").click();
+
+  // Esperar a que se rendericen los niveles reales
+  cy.get("#levels-container .level-btn", { timeout: 8000 })
+    .should("have.length.at.least", 1);
+
+  // Buscar un nivel por su texto interno ("1", "2", "3", etc.)
+  cy.contains("#levels-container .level-btn", levelNumber)
+    .click();
+
+  // Verificar que estamos en el juego
+  cy.get("#screen-game")
+    .should("exist")
+    .and("be.visible");
+});
+Cypress.Commands.add("openCompletedLevel", (levelNumber) => {
+  cy.get("#btn-levels").click();
+
+  // Cargar niveles
+  cy.get("#levels-container .level-btn", { timeout: 8000 })
+    .should("have.length.at.least", 1);
+
+  // Buscar solo los completados
+  cy.contains("#levels-container .level-btn.completed", levelNumber)
+    .click();
+
+  cy.get("#screen-game")
+    .should("exist")
+    .and("be.visible");
+});
+Cypress.Commands.add("openNextAvailableLevel", () => {
+  cy.get("#btn-levels").click();
+
+  cy.get("#levels-container .level-btn.available", { timeout: 8000 })
+    .first()
+    .click();
+
+  cy.get("#screen-game")
+    .should("exist")
+    .and("be.visible");
 });
